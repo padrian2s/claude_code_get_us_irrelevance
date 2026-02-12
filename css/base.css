@@ -1,0 +1,155 @@
+/* ============================================================
+   Design System — base.css
+   Study guide for AI interview transcript
+   ============================================================ */
+
+:root {
+  --color-primary:   #7c3aed;
+  --color-secondary: #0d9488;
+  --color-accent:    #f59e0b;
+  --color-success:   #10b981;
+  --color-rose:      #f43f5e;
+  --color-indigo:    #6366f1;
+  --color-purple:    #8b5cf6;
+
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   12px;
+  --space-lg:   16px;
+  --space-xl:   24px;
+  --space-2xl:  32px;
+  --space-3xl:  48px;
+
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+
+  --shadow-sm:  0 1px  2px rgba(0, 0, 0, 0.05);
+  --shadow-md:  0 4px  6px rgba(0, 0, 0, 0.07),
+                0 2px  4px rgba(0, 0, 0, 0.05);
+  --shadow-lg:  0 10px 15px rgba(0, 0, 0, 0.08),
+                0 4px   6px rgba(0, 0, 0, 0.04);
+  --shadow-xl:  0 20px 25px rgba(0, 0, 0, 0.10),
+                0 8px  10px rgba(0, 0, 0, 0.04);
+
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow:   0.35s ease;
+
+  --font-heading: Georgia, 'PT Serif', serif;
+  --font-body:    system-ui, -apple-system, 'Segoe UI', Roboto,
+                  Helvetica, Arial, sans-serif;
+  --font-code:    'SF Mono', SFMono-Regular, ui-monospace,
+                  'Cascadia Code', 'Fira Code', Menlo, monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  2rem;
+  --text-4xl:  2.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--gray-900);
+  background-color: var(--gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-indigo);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--gray-900);
+}
+
+h1 { font-size: var(--text-4xl); letter-spacing: -0.025em; margin-bottom: var(--space-xl); }
+h2 { font-size: var(--text-3xl); letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+h3 { font-size: var(--text-2xl); margin-bottom: var(--space-md); }
+h4 { font-size: var(--text-lg); margin-bottom: var(--space-sm); }
+
+p { margin-bottom: var(--space-lg); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .container { padding-inline: var(--space-xl); }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: calc(var(--text-4xl) * 1.15); }
+  h2 { font-size: calc(var(--text-3xl) * 1.1); }
+  .container { padding-inline: var(--space-2xl); }
+}

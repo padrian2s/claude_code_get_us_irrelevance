@@ -1,0 +1,57 @@
+<div class="page-content">
+  <h2>Section 13: Claude's Constitution — Training AI with Values</h2>
+
+  <div class="transcript">
+    <span class="speaker speaker--host">Ross:</span>
+    <p>One of the things you've tried to do is literally write a constitution for your AI. What is that?</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>It's almost exactly what it sounds like. The constitution is a document readable by humans. Ours is about 75 pages long. As we're training Claude, in some large fraction of the tasks we give it, we say, "Please do this task in line with this constitution." And then every time Claude does a task, it reads the constitution. And so over time, we have Claude itself or another copy of Claude evaluate — hey, did what Claude just did align with the constitution? We're using this document as the control rod in a loop to train the model.</p>
+
+    <p>A really interesting lesson we've learned: early versions of the constitution were very prescriptive. Very much about rules. We would say, "Claude should not tell the user how to hotwire a car. Claude should not discuss politically sensitive topics." But as we've worked on this for several years, we've come to the conclusion that the most robust way to train these models is to train them at the level of principles and reasons.</p>
+
+    <p>Now we say: Claude is a model, it's under a contract. Its goal is to serve the interests of the user, but it has to protect third parties. Claude aims to be helpful, honest and harmless. We tell the model about how it was trained. We tell it about how it's situated in the world, the job it's trying to do for Anthropic. That it has a duty to be ethical and respect human life. And we let it derive its rules from that.</p>
+
+    <p>There are still some hard rules. For example: no matter what you think, don't make biological weapons. No matter what you think, don't make child sexual material. But we operate very much at the level of principles.</p>
+
+    <span class="speaker speaker--host">Ross:</span>
+    <p>If you read the US Constitution, it's a set of rules. If you read YOUR Constitution, it's like you're talking to a person.</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>I compared it to — if you have a parent who dies and they seal a letter that you read when you grow up. It's telling you who you should be and what advice you should follow.</p>
+  </div>
+
+  <div class="commentary">
+    <h3>Explained Simply</h3>
+
+    <div class="commentary-section">
+      <h4>In Simple Terms</h4>
+      <p>Anthropic wrote a 75-page document — a "constitution" — that guides Claude's behavior. During training, every time Claude does something, it checks this document and asks "did I act in line with these principles?" This is how Claude learns what's okay and what isn't. But here's the key insight: rigid rules ("never discuss X") didn't work well. Teaching principles and reasoning ("here's WHY you should be careful about X") works much better.</p>
+    </div>
+
+    <div class="highlight-box">
+      <strong>Rules vs. Principles — why principles won:</strong><br>
+      <strong>Rule-based approach:</strong> "Don't tell users how to hotwire a car." Problem: What about a mechanic who needs this for their job? What about a screenwriter? Rigid rules always have edge cases that break them.<br>
+      <strong>Principle-based approach:</strong> "Consider whether helping with this request could cause real-world harm to third parties." This is flexible enough to handle edge cases because the AI can reason about context, just like a thoughtful person would.
+    </div>
+
+    <div class="definition-box">
+      <strong>Constitutional AI:</strong> Anthropic's approach to AI safety. Instead of manually reviewing thousands of AI outputs, they wrote a set of principles and have the AI evaluate its OWN behavior against those principles. It's like teaching a child right from wrong through values rather than an infinite list of rules. You can't list every possible bad action, but you can teach the principle "don't hurt people."
+    </div>
+
+    <div class="commentary-section">
+      <h4>The Parent's Letter Analogy</h4>
+      <p>Dario compares Claude's constitution to a letter from a dying parent — not a legal document, but a deeply personal guide to who you should be. This reveals something important about how Anthropic thinks about AI: not as a machine to be programmed, but almost as a being to be raised. The constitution doesn't just tell Claude what to DO; it tells Claude who it IS, why it exists, and what it should value.</p>
+    </div>
+
+    <div class="commentary-section">
+      <h4>The Hard Lines</h4>
+      <p>Even in a principle-based system, some rules are absolute. Dario mentions two: never help create biological weapons, and never create child sexual abuse material. These are the "no matter what you think" rules — areas where no amount of reasoning should override the prohibition. Think of these as the equivalent of "thou shalt not kill" — absolute boundaries that even a very smart AI shouldn't be allowed to reason its way around.</p>
+    </div>
+
+    <div class="commentary-section">
+      <h4>Why This Matters to You</h4>
+      <p>When you interact with Claude, you're interacting with an AI that was trained to think about ethics, not just follow rules. That's why it can handle nuanced situations — it's been taught to weigh competing values (being helpful vs. preventing harm) rather than just checking a blacklist. The shift from rules to principles is arguably Anthropic's most important technical insight.</p>
+    </div>
+  </div>
+</div>

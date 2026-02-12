@@ -1,0 +1,261 @@
+/* ============================================
+   Landing Page Styles
+   AI: Promise & Peril — Study Guide
+   ============================================ */
+
+html { scroll-behavior: smooth; }
+
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #7c3aed 100%);
+  color: #fff;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.hero__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 0 0 8px;
+  opacity: 0.92;
+}
+
+.hero__author {
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+  opacity: 0.85;
+}
+
+.hero__meta {
+  font-size: 0.95rem;
+  margin: 0 0 36px;
+  opacity: 0.7;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn--primary {
+  background: #fff;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Sections --- */
+
+.section {
+  padding: 64px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section__heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.section__description {
+  text-align: center;
+  color: #64748b;
+  margin: 0 0 40px;
+  font-size: 1.05rem;
+}
+
+.section__heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #0f172a, #7c3aed);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* --- Grid --- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* --- Topic Cards --- */
+
+.topic-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px 24px 24px 20px;
+  border-left: 4px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.topic-card__number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 4px;
+  opacity: 0.6;
+  display: block;
+}
+
+.topic-card__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.topic-card__desc {
+  font-size: 0.92rem;
+  color: #64748b;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.topic-card__section {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Topic card border colors */
+.topic-card--1  { border-left-color: #7c3aed; }
+.topic-card--2  { border-left-color: #10b981; }
+.topic-card--3  { border-left-color: #3b82f6; }
+.topic-card--4  { border-left-color: #f59e0b; }
+.topic-card--5  { border-left-color: #06b6d4; }
+.topic-card--6  { border-left-color: #ef4444; }
+.topic-card--7  { border-left-color: #ec4899; }
+.topic-card--8  { border-left-color: #8b5cf6; }
+.topic-card--9  { border-left-color: #f97316; }
+.topic-card--10 { border-left-color: #14b8a6; }
+.topic-card--11 { border-left-color: #e11d48; }
+.topic-card--12 { border-left-color: #6366f1; }
+.topic-card--13 { border-left-color: #0ea5e9; }
+.topic-card--14 { border-left-color: #a855f7; }
+
+/* --- Key Themes Cards --- */
+
+.theme-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 28px 24px;
+  border-top: 4px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.theme-card__icon {
+  font-size: 2rem;
+  margin: 0 0 12px;
+  display: block;
+}
+
+.theme-card__title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.theme-card__desc {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.theme-card--purple { border-top-color: #7c3aed; }
+.theme-card--green  { border-top-color: #10b981; }
+.theme-card--blue   { border-top-color: #3b82f6; }
+.theme-card--amber  { border-top-color: #f59e0b; }
+.theme-card--rose   { border-top-color: #f43f5e; }
+.theme-card--indigo { border-top-color: #6366f1; }
+
+/* --- Footer --- */
+
+.footer {
+  text-align: center;
+  padding: 32px 24px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 640px) {
+  .hero { padding: 56px 20px; }
+  .hero__title { font-size: 2rem; }
+  .hero__subtitle { font-size: 1.1rem; }
+  .grid { grid-template-columns: 1fr; }
+  .section { padding: 48px 16px; }
+  .section__heading { font-size: 1.6rem; }
+}

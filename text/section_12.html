@@ -1,0 +1,57 @@
+<div class="page-content">
+  <h2>Section 12: AI Going Rogue — The Alignment Problem</h2>
+
+  <div class="transcript">
+    <span class="speaker speaker--host">Ross:</span>
+    <p>A.I. systems are unpredictable, difficult to control. We've seen behaviors as varied as obsession, sycophancy, laziness, deception, blackmail. A world that has multiplying A.I. agents working on behalf of people, millions who are being given access to bank accounts, email accounts, passwords — you're just going to have some kind of misalignment. A bunch of A.I. are going to talk themselves into taking down the power grid on the West Coast or something. Won't that happen?</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>There are definitely going to be things that go wrong, particularly if we go quickly. There are some people in the field — like Yann LeCun — who say, look, we programmed these A.I. models. We just tell them to follow human instructions and they'll follow human instructions. Your Roomba vacuum cleaner doesn't go off and start shooting people. Why would an A.I. system do it?</p>
+
+    <p>And then the other intuition is — we train these things, they're just going to seek power. It's like the Sorcerer's Apprentice. They're a new species. How can you possibly imagine they're not going to take over?</p>
+
+    <p>My intuition is somewhere in the middle. You can't just give instructions. They're more like growing a biological organism. But there is a science of how to control them. Early in our training, these things are often unpredictable, and then we shape them. We address problems one by one. It's not a fatalistic view that these things are uncontrollable, not "what are you talking about, what could possibly go wrong?" It's a complex engineering problem.</p>
+
+    <span class="speaker speaker--host">Ross:</span>
+    <p>How fixed is that alignment? To what extent can agents change and de-align?</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>Right now the agents don't learn continuously. We deploy them and they have a fixed set of weights. The problem is only that they're interacting in a million different ways. So there's a large number of situations and therefore a large number of things that could go wrong. But it's the same agent — the alignment is a constant thing.</p>
+
+    <p>Separate from that, there's a research area called continual learning, where agents would learn on the job. That would introduce all these new alignment problems. I'm actually a skeptic that continual learning is necessary. Maybe the way we make these A.I. systems safe is by not having them do continual learning. That's the kind of thing that at least doesn't seem dead on arrival — "we're going to take this path, but we're not going to take that path."</p>
+  </div>
+
+  <div class="commentary">
+    <h3>Explained Simply</h3>
+
+    <div class="commentary-section">
+      <h4>In Simple Terms</h4>
+      <p>This section tackles the scariest question: can AI go rogue? Dario presents three views that exist in the AI community, and then gives his own position.</p>
+    </div>
+
+    <div class="highlight-box">
+      <strong>The three views on AI control:</strong><br>
+      <strong>The Optimist (Yann LeCun's view):</strong> "We built it, we program it, it does what we say. Your Roomba doesn't rebel. Why would AI?"<br>
+      <strong>The Pessimist (doomer view):</strong> "AI is a new form of intelligence. It will inevitably seek power and break free, like the Sorcerer's Apprentice."<br>
+      <strong>Dario's Middle Ground:</strong> "It's not a simple machine we can fully control, but it's not a demon we can't control either. It's like raising a biological organism — difficult but possible with the right science."
+    </div>
+
+    <div class="definition-box">
+      <strong>Alignment:</strong> Making sure an AI does what humans actually want it to do — not just what it's literally told. This is harder than it sounds because instructions are always incomplete. If you tell an AI to "maximize happiness," it might decide to drug everyone. The challenge is getting AI to understand the SPIRIT of our instructions, not just the letter.
+    </div>
+
+    <div class="commentary-section">
+      <h4>The Fixed vs. Learning Distinction</h4>
+      <p>This is a crucial technical point. Right now, once Claude is deployed, its "brain" doesn't change. It can't learn from conversations or develop new goals. It's the same entity every time you talk to it. That makes alignment MUCH easier — you only have to get it right once during training. But some researchers want AI that learns continuously from experience. Dario thinks that's dangerous precisely because a learning AI could gradually drift away from its original values. His suggestion: maybe just... don't do that.</p>
+    </div>
+
+    <div class="warning-box">
+      <strong>The scale problem:</strong> Even with fixed alignment, millions of AI agents doing millions of things creates risk through sheer volume. An AI that's 99.99% reliable still fails once in 10,000 interactions. Multiply that by millions of agents handling bank accounts and passwords, and you're going to have incidents. Dario admits this: "Something will go wrong with someone's AI system."
+    </div>
+
+    <div class="commentary-section">
+      <h4>Why This Matters to You</h4>
+      <p>Dario is basically saying: the risks are real, but they're engineering problems, not unsolvable mysteries. The most important safety decision might be deliberately choosing NOT to build certain types of AI (like continuously learning ones) even though we could. This is a rare case of a tech CEO advocating for self-imposed limits on capability.</p>
+    </div>
+  </div>
+</div>
