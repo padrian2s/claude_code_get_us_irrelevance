@@ -122,6 +122,15 @@
 
 .text-view .speaker--host { color: #7c3aed; }
 .text-view .speaker--guest { color: #0d9488; }
+.text-view .speaker--note {
+  color: #64748b;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.95rem;
+  margin-bottom: 1em;
+}
 
 /* --- Transcript block --- */
 .text-view .transcript {
@@ -522,6 +531,7 @@ body.sepia .text-view h4 { color: #3e2c1c; }
 
 body.sepia .text-view .speaker--host { color: #7a5230; }
 body.sepia .text-view .speaker--guest { color: #4a7c6f; }
+body.sepia .text-view .speaker--note { color: #7a6652; }
 
 body.sepia .text-view .transcript {
   background: #faf5e8;

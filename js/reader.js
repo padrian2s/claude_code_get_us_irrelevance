@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var TOTAL_PAGES = 14;
+  var TOTAL_PAGES = 25;
   var ZOOM_LEVELS = [70, 80, 90, 100, 110, 120, 130, 140];
   var VIEW_MODES = ['full', 'transcript', 'commentary'];
   var LS_PAGE  = 'ai-reader-page';

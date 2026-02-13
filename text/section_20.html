@@ -1,0 +1,56 @@
+<div class="page-content">
+  <h2>Section 20: Learning on the Job — Does AI Need What Humans Have?</h2>
+
+  <div class="transcript">
+    <span class="speaker speaker--host">Dwarkesh:</span>
+    <p>Take video editors. Part of their job involves learning about our audience's preferences, learning about my preferences and tastes. The skill and ability they have six months into the job — a model that can pick up that skill on the job on the fly, when should we expect such an AI system?</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>I think the "country of geniuses in a data center" will be able to do that. The way it will be able to do that is it will have general control of a computer screen. You'll be able to feed this in. It'll be able to also use the computer screen to go on the web, look at all your previous interviews, look at what people are saying on Twitter in response to your interviews, talk to you, ask you questions, talk to your staff, look at the history of edits that you did, and from that, do the job.</p>
+
+    <span class="speaker speaker--host">Dwarkesh:</span>
+    <p>For years, I've been trying to build different internal LLM tools for myself. Often I have these text-in, text-out tasks, which should be dead center in the repertoire of these models. Yet I still hire humans to do them. There's not this ongoing way I can engage with them to help them get better at the job the way I could with a human employee.</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>With the coding agents, I don't think people would say that learning on the job is what is preventing the coding agents from doing everything end to end. They keep getting better.</p>
+
+    <span class="speaker speaker--host">Dwarkesh:</span>
+    <p>Wouldn't you say with coding that's because there is an external scaffold of memory which exists instantiated in the codebase? I don't know how many other jobs have that.</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>But when you say that, what you're implying is that by reading the codebase into the context, I have everything that the human needed to learn on the job. So that would be an example of — whether it's written or not, whether it's available or not — a case where everything you needed to know you got from the context window. What we think of as learning — "I started this job, it's going to take me six months to understand the code base" — the model just did it in the context.</p>
+
+    <span class="speaker speaker--guest">Dario (on context length):</span>
+    <p>This isn't a research problem. This is an engineering and inference problem. If you want to serve long context, you have to store your entire KV cache. It's difficult to store all the memory in the GPUs, to juggle the memory around. There's the context length you train at and there's a context length that you serve at. If you train at a small context length and then try to serve at a long context length, maybe you get these degradations.</p>
+  </div>
+
+  <div class="commentary">
+    <h3>Explained Simply</h3>
+
+    <div class="commentary-section">
+      <h4>The Core Question</h4>
+      <p>Dwarkesh asks something really sharp here: Why can't he replace his video editor with AI? The editor does text-in, text-out work — exactly what AI should be great at. But the real value of a human editor isn't just skill; it's six months of accumulated context about the audience, the host's preferences, what worked before. Can AI get that kind of "on-the-job learning"?</p>
+    </div>
+
+    <div class="commentary-section">
+      <h4>Why Coding Is the Exception</h4>
+      <p>Dwarkesh makes a brilliant observation: coding progressed faster than other AI applications because a codebase IS a form of memory. Everything a human developer "knows" about a project is written down in the code, the commit history, the documentation. An AI can read all of it instantly. Most other jobs don't have this. A video editor's knowledge about audience preferences lives in their head, not in a document. A lawyer's feel for a judge's temperament isn't written down anywhere. Coding has an external scaffold of memory that most work doesn't.</p>
+    </div>
+
+    <div class="definition-box">
+      <strong>Context length:</strong> The amount of text an AI model can "see" at once during a conversation. Current frontier models can handle about a million tokens (~750,000 words). That's roughly 1,500 pages of text. Dario says making this much longer — 10 million, 100 million tokens — is an engineering problem (fitting data into GPU memory, managing inference costs), not a fundamental research barrier. Longer context = more "on-the-job learning" within each conversation.
+    </div>
+
+    <div class="highlight-box">
+      <strong>Dario's reframe of "learning on the job":</strong> Maybe what humans call "learning the job over six months" is actually just "reading a lot of context." If you gave a human instant access to every email, every Slack message, every document, every past decision — the way AI can read a codebase — maybe they wouldn't need six months either. The "learning" isn't some mystical process; it's information gathering. And AI is already extremely good at that, given enough context window.
+    </div>
+
+    <div class="commentary-section">
+      <h4>Three Paths to AI That Learns</h4>
+      <p>Dario outlines three separate ways AI could develop human-like on-the-job learning — and argues we probably don't need all three:<br>
+      <strong>1. Longer context:</strong> Just make the window bigger so the model can hold more information. Engineering problem, not research problem.<br>
+      <strong>2. Pre-training generalization:</strong> Train on such broad data that the model has already "seen" most situations. Like hiring someone with 20 years of experience in everything.<br>
+      <strong>3. True continual learning:</strong> The model permanently updates its knowledge over time, like a human. Dario thinks this would be nice but may not be necessary. The first two paths might be enough.</p>
+    </div>
+  </div>
+</div>

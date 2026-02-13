@@ -1,0 +1,55 @@
+<div class="page-content">
+  <h2>Section 17: Between Evolution and Learning — How AI Models Actually Improve</h2>
+
+  <div class="transcript">
+    <span class="speaker speaker--host">Dwarkesh:</span>
+    <p>I interviewed Rich Sutton last year, and he's actually very non-LLM-pilled. One way to paraphrase his objection is: Something which possesses the true core of human learning would not require all these billions of dollars of data and compute and these bespoke environments, to learn how to use Excel, how to use PowerPoint, how to navigate a web browser. The fact that we have to build in these skills using these RL environments hints that we are actually lacking a core human learning algorithm.</p>
+
+    <span class="speaker speaker--guest">Dario:</span>
+    <p>There is a genuine puzzle here, but it may not matter. If we look at pre-training scaling, it was very interesting back in 2017 when Alec Radford was doing GPT-1. The models before GPT-1 were trained on datasets that didn't represent a wide distribution of text. GPT-1 itself was trained on a bunch of fanfiction, I think actually. It didn't generalize well. It was only when you trained over all the tasks on the internet — when you did a general internet scrape — that you started to get generalization.</p>
+
+    <p>I think we're seeing the same thing on RL. We're starting first with simple RL tasks like training on math competitions, then moving to broader training that involves things like code. Now we're moving to many other tasks. I think then we're going to increasingly get generalization.</p>
+
+    <span class="speaker speaker--guest">Dario (on the sample efficiency puzzle):</span>
+    <p>There is an actual sample efficiency difference here. The models start from scratch and they need much more training. But we also see that once they're trained, if we give them a long context length of a million, they're very good at learning and adapting within that context.</p>
+
+    <p>I think there's something going on where pre-training is not like the process of humans learning, but it's somewhere between the process of humans learning and the process of human evolution. We get many of our priors from evolution. Our brain isn't just a blank slate. The language models are much more like blank slates. They literally start as random weights, whereas the human brain starts with all these regions connected to all these inputs and outputs.</p>
+
+    <p>Maybe we should think of pre-training — and for that matter, RL as well — as something that exists in the middle space between human evolution and human on-the-spot learning. And we should think of the in-context learning that the models do as something between long-term human learning and short-term human learning.</p>
+  </div>
+
+  <div class="commentary">
+    <h3>Explained Simply</h3>
+
+    <div class="commentary-section">
+      <h4>The Puzzle</h4>
+      <p>Here's something genuinely strange about AI: a human child can learn to use a new app in minutes. An AI model needs billions of examples and millions of dollars of compute to learn the same thing. Why? If AI is really on the path to human-level intelligence, shouldn't it be at least as efficient as a toddler? Rich Sutton — one of the godfathers of reinforcement learning — thinks this inefficiency hints at something fundamental we're missing.</p>
+    </div>
+
+    <div class="commentary-section">
+      <h4>Dario's Answer: The Learning Hierarchy</h4>
+      <p>Dario doesn't deny the puzzle. His answer is subtle: AI learning doesn't map neatly onto human learning because it's doing something DIFFERENT. Humans don't start from scratch — evolution spent billions of years building our brain's architecture, our instincts, our basic wiring. A newborn already has enormous built-in knowledge about how the world works. An AI model starts as literally random numbers. So pre-training is doing some of what evolution did for humans, PLUS some of what childhood learning does. It's filling in two gaps at once, which is why it needs so much data.</p>
+    </div>
+
+    <div class="highlight-box">
+      <strong>The intelligence hierarchy — four layers:</strong><br>
+      <strong>For humans:</strong> Evolution (billions of years) → Long-term learning (years) → Short-term learning (hours/days) → Instant reaction<br>
+      <strong>For AI:</strong> Pre-training + RL (months, billions of dollars) → In-context learning (the conversation window) → Instant inference<br><br>
+      Dario's key insight: AI's phases don't line up exactly with human phases. Pre-training falls BETWEEN evolution and long-term learning. In-context learning falls BETWEEN long-term and short-term learning. The phases are analogous but shifted.
+    </div>
+
+    <div class="definition-box">
+      <strong>In-context learning:</strong> When you give an AI model a long prompt — say, a million words of examples, documents, or a codebase — it adapts its behavior based on that input, without any permanent change to its "brain." It's like cramming for a test: highly effective in the moment, but it forgets everything when the conversation ends. Dario argues this is already a powerful form of learning — a million tokens represents days or weeks of human reading.
+    </div>
+
+    <div class="commentary-section">
+      <h4>The GPT-1 to GPT-2 Story</h4>
+      <p>Dario saw something important firsthand. GPT-1 (2018) was trained mostly on literary fiction — a narrow slice of human text. It was clever within that domain but couldn't generalize. GPT-2 (2019) was trained on a broad internet scrape — everything from Reddit to Wikipedia. Suddenly, it could do things it was never explicitly trained on, like basic arithmetic or translating between languages. The lesson: breadth of training data, not cleverness of technique, is what creates generalization. Dario thinks the exact same transition is now happening for RL — starting narrow (math competitions), going broad (code, then everything), and generalization will follow.</p>
+    </div>
+
+    <div class="quote-box">
+      <strong>"The models start from scratch and they need much more training. But we also see that once they're trained, if we give them a long context length of a million, they're very good at learning and adapting within that context."</strong><br><br>
+      This is important. Yes, AI models are less "sample efficient" than humans during training. But once trained, they can absorb and use new information FAST — a million words in seconds. The upfront cost is enormous, but the payoff per interaction is extraordinary.
+    </div>
+  </div>
+</div>
